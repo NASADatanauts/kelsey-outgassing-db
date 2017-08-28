@@ -11,15 +11,58 @@
 
     <!-- bring in jquery -->
     <script src="https://code.jquery.com/jquery-2.0.3.js"></script>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <!-- d3.js -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <!-- table sorting -->
+    <!-- <script src="http://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"> -->
+
     <!-- include a script to put in the client code -->
     <script src="javascripts/client.js"></script>
+
+    <style media="screen">
+      table, th {
+        text-align: center;
+      }
+      tr:hover {
+        background-color: #DFFFF2;
+      }
+    </style>
+
 
   </head>
   <body>
     <!-- Drastically reduce the clutter in the jekyll generated static site for purposes of seeing the return data! -->
-    <div>Show contents of API call here:</div>
+<div class="container-fluid">
+
+    <div class="jumbotron">
+
+      <h1>Outgassing</h1>
+      <div class="description">
+        <h4>Description:</h4>
+        <p>This tenth compilation of outgassing data of materials intended for spacecraft use supersedes Reference Publication 1124, Revision 3, September 1993. The data were obtained at the Goddard Space Flight Center (GSFC), utilizing equipment developed at Stanford Research Institute (SRI) under contract to the Jet Propulsion Laboratory (JPL).</p>
+        <a href="https://data.nasa.gov/Applied-Science/Outgassing-Db/r588-f7pr">Source: NASA's Open Data Portal</a>
+
+      </div>
+    </div>
+</div>
+
 
     <!-- return data will go here -->
-    <pre></pre>
+    <!-- <pre></pre> -->
+    <div class="container-fluid table_div">
+      <table id="outgassing_table_data" class="table-striped">
+        <thead><tr><th>category</th><th>cvcm</th><th>id</th><th>material_usage</th><th>mfr</th><th>sample_material</th><th>space_code</th><th>tml</th><th>wvr</th></tr></thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+
   </body>
 </html>
